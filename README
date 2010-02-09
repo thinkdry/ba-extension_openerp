@@ -1,0 +1,20 @@
+BlankApplication Extension OpenERP Connector
+==========
+
+BA Extension OpenERP is a plugin to handle remote connection to OpenERP
+Of course, You need to have a remote OpenERP instance running.
+This plugin let you configure an OpenERP Connection
+
+Dependencies
+=======
+
+This plugin is based on Ooor gem distributed on http://github.com/rvalyi/ooor
+just run: sudo gem install ooor
+
+Install
+=======
+
+Simply run:
+rake openerp:install
+
+Copyright (c) 2010 thinkDRY, released under the AGPL license

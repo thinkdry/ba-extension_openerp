@@ -1,0 +1,31 @@
+<%= superadmin_tabs_generator() %>
+
+<div class="objectListWithTab">
+	<div class="blockCornerLeft"></div><div class="blockElementHeader sevH">
+		<span id="item_count">OpenERP manager</span>
+	</div><div class="blockCornerRight"></div>
+
+	<div class="contentList superadmin">
+
+	<%= link_to_remote 'Add a new translation', 
+						:update => 'language_configuration', 
+						:url => context_switching_superadmin_translations_path(:locale_to_conf => 'translation_addition'), 
+						:method => :get %> |
+	<%= link_to_remote 'Add a new Project', 
+						:update => 'language_configuration', 
+						:url => context_switching_superadmin_translations_path(:locale_to_conf => 'project_addition'), 
+						:method => :get %> |
+	<%= link_to_remote 'Add a new Language', 
+						:update => 'language_configuration', 
+						:url => context_switching_superadmin_translations_path(:locale_to_conf => 'language_addition'), 
+						:method => :get %>
+
+    <%= render  :partial => 'translations_tab', 
+				:locals => {:translations => @translations, 
+				:file => @file, 
+				:translation_sections => @translation_sections, 
+				:project => @project, 
+				:language => @language}
+	%>	
+	</div>
+</div>
